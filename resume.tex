@@ -1,39 +1,36 @@
 \documentclass[10pt, letterpaper]{article}
 
-% Packages:
 \usepackage[
-    ignoreheadfoot, % set margins without considering header and footer
-    top=1.0cm, bottom=1.0cm, left=1.5cm, right=1.5cm, % Tighter margins to ensure one page
-    footskip=1.0 cm, % seperation between body and footer
-    % showframe % for debugging
-]{geometry} % for adjusting page geometry
-\usepackage{titlesec} % for customizing section titles
-\usepackage{tabularx} % for making tables with fixed width columns
-\usepackage{array} % tabularx requires this
-\usepackage[dvipsnames]{xcolor} % for coloring text
-\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
-\usepackage{enumitem} % for customizing lists
-\usepackage{fontawesome5} % for using icons
-\usepackage{amsmath} % for math
+    ignoreheadfoot, 
+    top=1.0cm, bottom=1.0cm, left=1.5cm, right=1.5cm, 
+    footskip=1.0 cm, 
+    ]{geometry} 
+\usepackage{titlesec} 
+\usepackage{tabularx} 
+\usepackage{array} 
+\usepackage[dvipsnames]{xcolor} 
+\definecolor{primaryColor}{RGB}{0, 0, 0} 
+\usepackage{enumitem} 
+\usepackage{fontawesome5} 
+\usepackage{amsmath} 
 \usepackage[
     pdftitle={Andreas Tzitzikas's CV},
     pdfauthor={Andreas Tzitzikas},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
     urlcolor=primaryColor
-]{hyperref} % for links, metadata and bookmarks
-\usepackage[pscoord]{eso-pic} % for floating text on the page
-\usepackage{calc} % for calculating lengths
-\usepackage{bookmark} % for bookmarks
-\usepackage{lastpage} % for getting the total number of pages
-\usepackage{changepage} % for one column entries (adjustwidth environment)
-\usepackage{paracol} % for two and three column entries
-\usepackage{ifthen} % for conditional statements
-\usepackage{needspace} % for avoiding page brake right after the section title
-\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
-\usepackage{datetime} % For \today
+]{hyperref} 
+\usepackage[pscoord]{eso-pic} 
+\usepackage{calc} 
+\usepackage{bookmark} 
+\usepackage{lastpage} 
+\usepackage{changepage} 
+\usepackage{paracol} 
+\usepackage{ifthen} 
+\usepackage{needspace} 
+\usepackage{iftex} 
+\usepackage{datetime} 
 
-% Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
     \input{glyphtounicode}
     \pdfgentounicode=1
@@ -44,41 +41,37 @@
 
 \usepackage{charter}
 
-% Some settings:
 \raggedright
-\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
-\pagestyle{empty} % no header or footer
-\setcounter{secnumdepth}{0} % no section numbering
-\setlength{\parindent}{0pt} % no indentation
-\setlength{\topskip}{0pt} % no top skip
-\setlength{\columnsep}{0.2cm} % set column seperation
-\pagenumbering{gobble} % no page numbering
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} 
+\pagestyle{empty} 
+\setcounter{secnumdepth}{0} 
+\setlength{\parindent}{0pt} 
+\setlength{\topskip}{0pt} 
+\setlength{\columnsep}{0.2cm} 
+\pagenumbering{gobble} 
 
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{
-    % left space:
     -1pt
 }{
-    % top space:
-    0.3 cm
+    0.25 cm 
 }{
-    % bottom space:
-    0.2 cm
-} % section title spacing
+    0.15 cm
+} 
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} 
 \newenvironment{highlights}{
     \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.10 cm,
+        topsep=0.05 cm,
+        parsep=0.05 cm,
         partopsep=0pt,
         itemsep=0pt,
         leftmargin=0 cm + 10pt
     ]
 }{
     \end{itemize}
-} % new environment for highlights
+} 
 
 \newenvironment{onecolentry}{
     \begin{adjustwidth}{
@@ -88,7 +81,7 @@
     }
 }{
     \end{adjustwidth}
-} % new environment for one column entries
+} 
 
 \newenvironment{twocolentry}[2][]{
     \onecolentry
@@ -99,15 +92,14 @@
     \switchcolumn \raggedleft \secondColumn
     \end{paracol}
     \endonecolentry
-} % new environment for two column entries
+} 
 
 \newenvironment{header}{
     \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
 }{
     \par\kern\topsep
-} % new environment for the header
+} 
 
-% save the original href command in a new command:
 \let\hrefWithoutArrow\href
 
 \begin{document}
@@ -124,119 +116,134 @@
         \vspace{5 pt}
 
         \normalsize
-        \mbox{College Park, MD}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{mailto:atzi@tutamail.com}{andreas.tz.work@gmail.com}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{tel:410-920-5319}{410-920-5319}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}%
+        \mbox{College Park, MD}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{mailto:atzi@tutamail.com}{andreas.tz.work@gmail.com}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{tel:410-920-5319}{410-920-5319}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
     \end{header}
 
     \vspace{5 pt - 0.3 cm}
 
     \section{Education}
 
-        \begin{twocolentry}{
-            Expected May 2026
-        }
-            \textbf{University of Maryland}, College Park, MD
-        \end{twocolentry}
-        \begin{twocolentry}{
-            \textbf{GPA: 3.88}
-        }
-            Bachelor of Science in Computer Engineering
-        \end{twocolentry}
-
-    \section{Experience}
-
-        \begin{twocolentry}{
-            Jun 2025 – Aug 2025
-        }
-            \textbf{Embedded Systems Intern}, Alchemity -- College Park, MD
-        \end{twocolentry}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Developed desktop and embedded software tools to support process automation and equipment control in a research setting, using Rust, Electron.js, and Python.
-                \item Designed real-time firmware for STM32-based microcontrollers with support for non-blocking motor and relay control, SPI peripherals, and user interface elements.
-                \item Built end-to-end control interfaces including desktop GUIs, embedded display drivers, and command-line tools to streamline operator workflows.
-                \item Contributed to the design and deployment of robust, fault-tolerant embedded control systems to maintain operational safety and uptime in laboratory environments.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-            Jun 2024 – Present
-        }
-            \textbf{Technical Coordinator}, Electronics Prototyping Lab, Terrapin Works -- College Park, MD \end{twocolentry}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Partnered with 20+ students and faculty per semester to provide end-to-end support on more than than a dozen cuPCBs - from - from schematic design toassembly - whiley - while performing all maintenance on LPKF manufacturing tools to ensure 90\% uptime.
-                \item Led training for new employees and expanded campus outreach to increase awareness of PCB services, while assisting researchers in the Instructional Electronics Lab with diagnosing and building devices.
-            \end{highlights}
-        \end{onecolentry}
-        
+\begin{twocolentry}{Expected May 2027}
+\textbf{University of Maryland}, College Park, MD
+\end{twocolentry}
+\begin{twocolentry}{\textbf{GPA: 4.0}}
+Master of Science in Computer Engineering
+\end{twocolentry}
+\vspace{0.15cm} 
+\begin{twocolentry}{Expected May 2026}
+\textbf{University of Maryland}, College Park, MD
+\end{twocolentry}
+\begin{twocolentry}{\textbf{GPA: 3.88}}
+Bachelor of Science in Computer Engineering
+\end{twocolentry}
     \section{Projects}
     
         \begin{twocolentry}{
-             July 2025 - September 2025 } \textbf{ 5-Stage Pipelined RISC-V CPU}
+            Aug 2025 - Present } \textbf{ 5-Stage Pipelined 32bit RISC-V CPU}
         \end{twocolentry}
-        \vspace{0.10 cm}
+        \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Designed and implemented a complete 5-stage pipelined CPU architecture (Fetch, Decode, Execute, Memory, Write-Back) supporting the RISC-V ISA, including hazard detection and forwarding units.
-                \item Developed and verified the design using SystemVerilog, performing synthesis and implementation on a Xilinx FPGA and validating against a suite of assembly-level test programs.
+                \item Design and implement a 5-stage pipelined CPU (Fetch, Decode, Execute, Memory, Write-Back) for the RISC-V ISA, including hazard detection and forwarding units.
+                \item Achieved 100\% functional correctness by passing a comprehensive suite of 50+ assembly test programs and successfully synthesizing the design on a Xilinx FPGA.
             \end{highlights}
         \end{onecolentry}
 
-        \vspace{0.2 cm}
+        \vspace{0.15 cm}
 
         \begin{twocolentry}{
             Feb 2025 – Apr 2025
         }
             \textbf{Low-Power 6-bit Dadda Multiplier in CMOS}
         \end{twocolentry}
-        \vspace{0.10 cm}
+        \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Designed and implemented a high-performance 6-bit Dadda multiplier optimized for low power and minimal propagation delay, targeting efficient deep neural network acceleration.
-                \item Manual optimization of the transistor level including gate sizing, strategic transistor placement, and layout refinement to reduce area and power consumption.
-                \item Achieved significant improvements in performance by balancing speed, power, and area (PPA) trade-offs, with final metrics verified through Cadence Specter simulations.
+                \item Optimized a 6-bit Dadda multiplier to achieve a 27\% reduction in worst-case propagation delay (from 422 ps to 307 ps) and a 30\% reduction in power consumption through strategic transistor sizing and architectural trade-offs.
+                \item Pivoted from a Carry-Lookahead Adder (CLA) to a Ripple-Carry Adder (RCA) for the final summation stage after experimental simulations showed the CLA-based design nearly doubled both power consumption and delay.
             \end{highlights}
         \end{onecolentry}
 
-        \vspace{0.2 cm}
+        \vspace{0.15 cm}
 
         \begin{twocolentry}{
             Jan 2025 – May 2025
         }
             \textbf{STM32G4 Bare-Metal Peripheral Integration}
         \end{twocolentry}
-        \vspace{0.10 cm}
+        \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Designed and implemented firmware modules in the ARM Assembly for the STM32G491RE microcontroller, enabling complete control over various hardware peripherals.
-                \item Performed direct register-level programming for peripherals, including GPIO, DAC, ADC, Timers (PWM / PPM / OPM) and SPI for external W25QXX flash memory.
+                \item Implemented firmware modules in ARM Assembly for the STM32G491RE, enabling complete control over hardware peripherals.
+                \item Performed direct register-level programming for GPIO, DAC, ADC, Timers (PWM/PPM), and SPI for external flash memory.
                 \item Developed and managed shared EXTI interrupt routines for GPIO, DAC, ADC, and TIM2.
             \end{highlights}
         \end{onecolentry}
+    \section{Experience}
+        
+        \begin{twocolentry}{
+            Jun 2025 – Aug 2025
+        }
+            \textbf{Embedded Systems Intern}, Alchemity -- College Park, MD
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Accelerated validation of a hybrid solid oxide fuel cell reactor by developing a full-stack automation suite (Rust, Python, Electron.js) to test component stacks in parallel, converting multi-day manual experiments into automated overnight runs.
+                \item Engineered real-time STM32 firmware to precisely control the synthesis of proprietary materials within modular reactors, featuring non-blocking motor/relay drivers and SPI peripheral management.
+                \item Built end-to-end control interfaces including desktop GUIs, embedded display drivers, and CLI tools to streamline workflows.
+                \item Deployed robust, fault-tolerant embedded control systems to maintain safety and uptime in laboratory environments.
+            \end{highlights}
+        \end{onecolentry}
 
+
+        \vspace{0.15 cm}
+        
+        \begin{twocolentry}{
+            Sep 2025 – Present
+        }
+            \textbf{Undergraduate Teaching Assistant (ENEE205)}, ECE Department -- College Park, MD
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Lead weekly lab and discussion sections for 12 students, clarifying core circuit theory and guiding hands-on application of course concepts.
+                \item Evaluate and provide constructive feedback on homework, lab reports, and quizzes to reinforce learning objectives and ensure student comprehension.
+            \end{highlights}
+        \end{onecolentry}
+        
+        \vspace{0.15 cm}
+
+        \begin{twocolentry}{
+            Jun 2024 – Present
+        }
+            \textbf{Technical Coordinator}, Electronics Prototyping Lab, Terrapin Works -- College Park, MD \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Provide end-to-end PCB support (schematic to assembly) for 20+ students and faculty per semester, maintaining LPKF tools to ensure 90\% uptime.
+                \item Lead training for new employees and expand campus outreach to increase awareness of PCB services, while assisting researchers with device diagnostics and construction.
+            \end{highlights}
+        \end{onecolentry}
     \section{Skills}
         \begin{onecolentry}
-            \textbf{Languages \& HDLs:} C/C++, Python, Rust, SystemVerilog, Verilog, ARM Assembly \\
+            \textbf{Languages \& HDLs:} C/C++, Python, Rust, Java, OCaml, SystemVerilog, Verilog, MPI, OpenMP, CUDA, ARM Assembly \\
             \textbf{Computer Architecture:} RISC-V \& ARM ISAs, Pipelined Datapaths, Hazard Control, CMOS VLSI Design, RTL Design \\
             \textbf{EDA Tools \& Methodologies:} Xilinx Vivado, ModelSim/QuestaSim, Cadence Spectre, FPGA Synthesis \& Implementation, Testbench Development, PPA Optimization \\
             \textbf{Embedded Systems:} STM32 Bare-Metal Firmware, Real-Time Control, PCB Design, SPI, I2C, UART, GPIO, ADC/DAC
