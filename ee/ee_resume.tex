@@ -1,0 +1,254 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.8cm, bottom=0.8cm, left=1.2cm, right=1.2cm,
+    footskip=1.0 cm,
+    ]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Andreas Tzitzikas's Electrical Engineering Resume},
+    pdfauthor={Andreas Tzitzikas},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{datetime}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.2cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.2 cm
+}{
+    0.1 cm
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{15 pt}{15 pt}\selectfont Andreas Tzitzikas
+
+        \vspace{3 pt}
+
+        \normalsize
+        \mbox{College Park, MD}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
+    \end{header}
+
+    \vspace{3 pt}
+
+    \section{Education}
+
+    \vspace{0.10cm}
+    \begin{twocolentry}{Expected May 2027}
+        \textbf{University of Maryland}, College Park, MD
+    \end{twocolentry}
+    \begin{twocolentry}{\textbf{GPA: 4.00}}
+        \textit{Master of Science in Computer Engineering}
+    \end{twocolentry}
+    \vspace{0.05cm}
+    \begin{twocolentry}{Expected May 2026}
+        \textit{Bachelor of Science in Computer Engineering} (GPA: 3.88)
+    \end{twocolentry}
+    \vspace{0.05cm}
+    \begin{onecolentry}
+        \textbf{Relevant Coursework:} Electric Circuits (ENEE205), Elements of Discrete Signal Analysis (ENEE222), Digital Circuits Lab (ENEE245), Introduction to Micro/Nanoelectronics (ENEE304), Microprocessors (ENEE440)
+    \end{onecolentry}
+
+    \section{Projects}
+
+        \begin{twocolentry}{
+            Jan 2025 – May 2025
+        }
+            \textbf{STM32G4 Bare-Metal Peripheral Integration | ARM Assembly, Analog/Digital Interfaces}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Implemented direct register-level programming for ADC, DAC, PWM/PFM generation using TIM2, and SPI flash memory interfaces on STM32G4 microcontroller platform.
+                \item Engineered multiplexed interrupt system routing single hardware interrupt to multiple peripheral drivers with state-based arbitration for efficient resource utilization.
+                \item Developed comprehensive analog signal processing including ADC sampling, DAC output generation, and PWM motor control with precise timing and synchronization requirements.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Jan 2024 – Present
+        }
+            \textbf{PCB Design with RP2350 Microcontroller | KiCad, Power Systems, Signal Integrity}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed complete PCB system with QFN60 package RP2350 microcontroller, implementing proper power distribution networks, decoupling capacitors, and signal integrity for reliable high-speed operation.
+                \item Developed sensor interface circuits with appropriate filtering, amplification, and protection circuitry for robust analog signal acquisition and processing.
+                \item Generated fabrication documentation including layer stackup specifications, Gerber files, bill of materials, and assembly guidelines for professional PCB manufacturing.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Nov 2025 - Dec 2025 } \textbf{Tomasulo Out-of-Order RISC-V CPU | Digital Design, Timing Analysis, Verification}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Architected out-of-order execution system using Tomasulo's Algorithm with register renaming, reservation stations, and reorder buffer for advanced digital system design.
+                \item Achieved 36\% higher operating frequency (69.7MHz vs 51.2MHz) and 40-150\% IPC improvement compared to in-order implementation through timing optimization and performance analysis.
+                \item Synthesized to fabrication-ready GDSII using Sky130 130nm PDK, achieving zero DRC/LVS errors and comprehensive static timing analysis for reliable digital circuit operation.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+    \section{Experience}
+
+        \begin{twocolentry}{
+            Jun 2025 – Aug 2025
+        }
+            \textbf{Embedded Systems Intern}, Alchemity -- College Park, MD
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Engineered real-time control systems for hybrid solid oxide fuel cell reactors, implementing precise analog signal processing and motor control with PWM and ADC interfaces.
+                \item Developed embedded firmware with interrupt-driven architectures, real-time scheduling, and robust error handling for industrial control applications.
+                \item Integrated analog sensors and actuators with digital control systems, ensuring signal integrity, noise immunity, and reliable operation in harsh environments.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+            Sep 2025 – Present
+        }
+            \textbf{Undergraduate Teaching Assistant}, ENEE205 Electric Circuits -- College Park, MD
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Lead laboratory and discussion sections covering circuit theory fundamentals, Kirchhoff's laws, Thevenin/Norton equivalents, and AC/DC circuit analysis.
+                \item Provide hands-on guidance with oscilloscopes, signal generators, and circuit simulation tools for practical circuit design and measurement techniques.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+            Jan 2024 – Present
+        }
+            \textbf{Technical Coordinator}, Electronics Prototyping Lab, Terrapin Works -- College Park, MD
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Maintain and operate LPKF PCB prototyping equipment ensuring reliable fabrication capabilities with 90\% uptime for student and faculty projects.
+                \item Provide technical support for PCB design, fabrication, and assembly processes including schematic capture, layout, and component soldering techniques.
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Skills}
+        \begin{onecolentry}
+            \textbf{Circuit Design:} Analog/Digital Circuits, Signal Processing, Power Systems, Filter Design \\
+            \textbf{Electronics:} Microcontrollers, ADC/DAC, PWM, SPI/I2C/UART, GPIO, Embedded Programming \\
+            \textbf{Laboratory Tools:} Oscilloscopes, Signal Generators, Multimeters, PCB Fabrication \\
+            \textbf{Software Tools:} KiCad, Cadence Spectre, MATLAB, LTspice, Xilinx Vivado \\
+            \textbf{Analysis:} Circuit Analysis, Signal Processing, Control Systems, Electromagnetic Compatibility
+        \end{onecolentry}
+
+\end{document}

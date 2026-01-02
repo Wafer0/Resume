@@ -1,0 +1,239 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.8cm, bottom=0.8cm, left=1.2cm, right=1.2cm,
+    footskip=1.0 cm,
+    ]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Andreas Tzitzikas's Software Engineering Resume},
+    pdfauthor={Andreas Tzitzikas},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{datetime}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.2cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.2 cm
+}{
+    0.1 cm
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{15 pt}{15 pt}\selectfont Andreas Tzitzikas
+
+        \vspace{3 pt}
+
+        \normalsize
+        \mbox{College Park, MD}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
+    \end{header}
+
+    \vspace{3 pt}
+
+    \section{Education}
+
+    \vspace{0.10cm}
+    \begin{twocolentry}{Expected May 2027}
+        \textbf{University of Maryland}, College Park, MD
+    \end{twocolentry}
+    \begin{twocolentry}{\textbf{GPA: 4.00}}
+        \textit{Master of Science in Computer Engineering}
+    \end{twocolentry}
+    \vspace{0.05cm}
+    \begin{twocolentry}{Expected May 2026}
+        \textit{Bachelor of Science in Computer Engineering} (GPA: 3.88)
+    \end{twocolentry}
+    \vspace{0.05cm}
+    \begin{onecolentry}
+        \textbf{Relevant Coursework:} Parallel Computing (CMSC416), Algorithms (CMSC351), Organization of Programming Languages (CMSC330), Object-Oriented Programming (CMSC132), Computer Systems (CMSC216), Discrete Structures (CMSC250)
+    \end{onecolentry}
+
+    \section{Projects}
+
+        \begin{twocolentry}{
+            Aug 2025 - Present
+        }
+            \textbf{CPU Performance Analysis Framework | Python, Bash, Automation}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed comprehensive benchmarking suite in Python for automated performance analysis, implementing statistical analysis and workload characterization across different CPU architectures.
+                \item Architected modular analysis framework with custom scripts for IPC measurement, performance profiling, and automated report generation with detailed trade-off analysis.
+                \item Built scalable testing infrastructure supporting parallel execution and data visualization for comparative architecture studies and optimization research.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Jan 2025 – May 2025
+        }
+            \textbf{Parallel Game of Life Implementation | MPI, C/C++, Performance Optimization}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Implemented high-performance parallel version of Conway's Game of Life using MPI with 1D row decomposition, achieving scalable performance across 128 processes with 2x reference throughput.
+                \item Architected non-blocking Isend/Irecv communication patterns with ghost cell synchronization and dynamic load balancing for optimal parallel efficiency.
+                \item Developed comprehensive timing analysis framework using MPI\_Wtime for performance characterization and bottleneck identification in distributed computing environments.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Spring 2025
+        }
+            \textbf{Space Invaders Video Game | Java, Object-Oriented Design, AWT Graphics}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed complete Space Invaders game using advanced OOP principles including inheritance, polymorphism, inner classes, and interfaces with lambda expressions for bonus systems.
+                \item Implemented real-time graphics engine with collision detection algorithms, coordinated enemy movement patterns, and progressive difficulty scaling using prime number-based firing rates.
+                \item Architected modular game architecture with 15 enemies, boss battles, scoring mechanics, and complete win/lose conditions demonstrating comprehensive software design patterns.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+            Jan 2025 – May 2025
+        }
+            \textbf{STM32 Bare-Metal Peripheral Integration | ARM Assembly, Embedded C, Real-Time Systems}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed low-level firmware in ARM Assembly and C for STM32G4 microcontroller, implementing register-level programming for GPIO, ADC, DAC, PWM timers, and SPI flash memory interfaces.
+                \item Architected multiplexed interrupt system routing single hardware interrupt to four distinct peripheral drivers using state-based arbitration for efficient resource management.
+                \item Engineered real-time embedded software with non-blocking drivers, precise timing control, and robust error handling for industrial control applications requiring deterministic behavior.
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Experience}
+
+        \begin{twocolentry}{
+            Jun 2025 – Aug 2025
+        }
+            \textbf{Embedded Systems Intern}, Alchemity -- College Park, MD
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed full-stack automation suite using Python and Rust to parallelize testing workflows, converting multi-day manual experiments into overnight automated runs with significant throughput improvements.
+                \item Built end-to-end control interfaces including desktop GUIs, CLI tools, and embedded communication protocols to streamline workflows between hardware and software teams.
+                \item Implemented real-time data processing and visualization systems with performance monitoring, error handling, and user-friendly interfaces for experimental control.
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Skills}
+        \begin{onecolentry}
+            \textbf{Programming Languages:} Python, C/C++, Java, Rust, OCaml, Bash, MPI, OpenMP, CUDA \\
+            \textbf{Software Development:} Object-Oriented Design, Algorithms, Data Structures, Parallel Computing, Performance Analysis, Git, Linux \\
+            \textbf{Frameworks \& Tools:} MPI/OpenMP/CUDA, JUnit Testing, Build Automation, Version Control, Debugging, Profiling \\
+            \textbf{Methodologies:} Agile Development, Test-Driven Development, Code Review, Documentation, Algorithm Analysis
+        \end{onecolentry}
+
+\end{document}

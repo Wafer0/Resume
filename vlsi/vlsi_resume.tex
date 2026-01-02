@@ -1,0 +1,233 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.8cm, bottom=0.8cm, left=1.2cm, right=1.2cm,
+    footskip=1.0 cm,
+    ]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Andreas Tzitzikas's VLSI/Circuit Design Resume},
+    pdfauthor={Andreas Tzitzikas},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{datetime}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.2cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.2 cm
+}{
+    0.1 cm
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{15 pt}{15 pt}\selectfont Andreas Tzitzikas
+
+        \vspace{3 pt}
+
+        \normalsize
+        \mbox{College Park, MD}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
+    \end{header}
+
+    \vspace{3 pt}
+
+    \section{Education}
+
+    \vspace{0.10cm}
+    \begin{twocolentry}{Expected May 2027}
+        \textbf{University of Maryland}, College Park, MD
+    \end{twocolentry}
+    \begin{twocolentry}{\textbf{GPA: 4.00}}
+        \textit{Master of Science in Computer Engineering}
+    \end{twocolentry}
+    \vspace{0.05cm}
+    \begin{twocolentry}{Expected May 2026}
+        \textit{Bachelor of Science in Computer Engineering} (GPA: 3.88)
+    \end{twocolentry}
+    \vspace{0.05cm}
+    \begin{onecolentry}
+        \textbf{Relevant Coursework:} Digital CMOS VLSI Design (ENEE640), CMOS VLSI Design (ENEE646), Introduction to Micro/Nanoelectronics (ENEE304), Elements of Discrete Signal Analysis (ENEE222), Computer Organization (ENEE350)
+    \end{onecolentry}
+
+    \section{Projects}
+
+        \begin{twocolentry}{
+            Spring 2025 } \textbf{6-Bit Dadda Multiplier | CMOS VLSI Design, Neural Network Accelerators}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed 6-bit Dadda multiplier for neural network accelerators, achieving 307 ps propagation delay and 0.279 mW power consumption through CMOS optimization.
+                \item Implemented Dadda architecture with partial product generation, reduction stages, and RCA final summation, including cheating device for worst-case all-ones inputs.
+                \item Optimized transistor sizing (NMOS M=15, PMOS M=14, 300nm gate width) and minimized parasitic capacitance for maximum speed-power efficiency.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Nov 2025 - Dec 2025 } \textbf{Tomasulo Out-of-Order RISC-V CPU | CMOS VLSI Design, ASIC Implementation}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Architected CMOS VLSI system using Tomasulo's Algorithm with register renaming, reservation stations, and reorder buffer for advanced semiconductor design.
+                \item Achieved 36\% higher operating frequency (69.7MHz vs 51.2MHz) through CMOS circuit optimization, timing closure, and power-performance trade-offs.
+                \item Synthesized to fabrication-ready GDSII using Sky130 130nm CMOS PDK with zero DRC/LVS violations and comprehensive static timing analysis.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Aug 2025 - Nov 2025 } \textbf{5-Stage In-Order RISC-V CPU | CMOS Circuit Design, ASIC Synthesis}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed synchronous CMOS digital circuits implementing hazard detection, data forwarding, and branch resolution for reliable semiconductor operation.
+                \item Optimized critical path timing through CMOS transistor sizing, clock domain management, and synchronous reset implementation for manufacturable ASIC designs.
+                \item Synthesized CMOS standard cells achieving 10,121 total cells with 1.0mm² die area, demonstrating PPA optimization in 130nm CMOS technology.
+                \item Implemented comprehensive verification methodology ensuring 100\% functional coverage and timing closure for CMOS circuit reliability.
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Experience}
+        
+        \begin{twocolentry}{
+            Jun 2025 – Aug 2025
+        }
+            \textbf{Embedded Systems Intern}, Alchemity -- College Park, MD
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Accelerated validation of a hybrid solid oxide fuel cell reactor by developing a full-stack automation suite (\textbf{Rust}, \textbf{Python}) to parallelize testing, converting multi-day manual experiments into overnight runs to significantly increase throughput.
+                \item Engineered real-time \textbf{STM32} firmware to precisely control material synthesis within modular reactors, featuring non-blocking motor/relay drivers and \textbf{SPI} peripheral management.
+                \item Built end-to-end control interfaces including desktop GUIs, embedded display drivers, and CLI tools to streamline workflows between hardware and software teams.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.10 cm}
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+            Jan 2024 – Present
+        }
+            \textbf{Technical Coordinator}, Electronics Prototyping Lab, Terrapin Works -- College Park, MD \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Provide end-to-end \textbf{PCB} support (schematic to assembly) for 20+ students and faculty per semester, maintaining \textbf{LPKF} tools to ensure \textbf{90\% uptime}.
+                \item Lead training for new employees and expand campus outreach to increase awareness of PCB services, while assisting researchers with diagnostics.
+            \end{highlights}
+        \end{onecolentry}
+    \section{Skills}
+        \begin{onecolentry}
+            \textbf{CMOS VLSI Design:} Digital CMOS Design, Transistor-Level Design, Standard Cell Libraries, CMOS PDKs \\
+            \textbf{Circuit Design:} Synchronous Digital Circuits, CMOS Logic Design, Timing Analysis, Power Analysis \\
+            \textbf{Semiconductor Tools:} Cadence Spectre, CMOS PDKs (Sky130), DRC/LVS Verification, Static Timing Analysis \\
+            \textbf{ASIC Methodologies:} PPA Optimization, CMOS Synthesis, Physical Design, Semiconductor Manufacturing
+        \end{onecolentry}
+
+\end{document}
