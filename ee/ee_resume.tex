@@ -116,17 +116,21 @@
 
         \normalsize
         \mbox{College Park, MD}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
+        \mbox{U.S. Citizen}
+        \kern 3.0 pt
+        \AND
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
     \end{header}
 
@@ -147,54 +151,8 @@
     \end{twocolentry}
     \vspace{0.05cm}
     \begin{onecolentry}
-        \textbf{Relevant Coursework:} Electric Circuits (ENEE205), Elements of Discrete Signal Analysis (ENEE222), Digital Circuits Lab (ENEE245), Introduction to Micro/Nanoelectronics (ENEE304), Microprocessors (ENEE440)
+        \textbf{Relevant Coursework:} Elements of Discrete Signal Analysis (ENEE222), Introduction to Micro/Nanoelectronics (ENEE304), Microprocessors (ENEE440), Operating Systems (ENEE447), Reverse Eng. \& HW Security (ENEE459B)
     \end{onecolentry}
-
-    \section{Projects}
-
-        \begin{twocolentry}{
-            Jan 2025 – May 2025
-        }
-            \textbf{STM32G4 Bare-Metal Peripheral Integration | ARM Assembly, Analog/Digital Interfaces}
-        \end{twocolentry}
-        \vspace{0.05 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Implemented direct register-level programming for ADC, DAC, PWM/PFM generation using TIM2, and SPI flash memory interfaces on STM32G4 microcontroller platform.
-                \item Engineered multiplexed interrupt system routing single hardware interrupt to multiple peripheral drivers with state-based arbitration for efficient resource utilization.
-                \item Developed comprehensive analog signal processing including ADC sampling, DAC output generation, and PWM motor control with precise timing and synchronization requirements.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.10 cm}
-        \begin{twocolentry}{
-            Jan 2024 – Present
-        }
-            \textbf{Dual-Host S2-LP Radio Shield | KiCad, RF Design, Multi-Platform Firmware}
-        \end{twocolentry}
-        \vspace{0.05 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Designed dual-host development board for S2-LP sub-1 GHz transceiver with STM32 and RP2350 compatibility, implementing complete RF circuit with matching network and crystal oscillator for optimal radio performance.
-                \item Developed shadow mode debugging architecture where STM32 passively monitors SPI traffic between RP2350 and radio, enabling cross-platform firmware migration and protocol analysis for wireless development.
-                \item Created comprehensive firmware suite for both platforms including SPI drivers, radio configuration, packet transmission, and bus monitoring capabilities with detailed technical documentation.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.10 cm}
-        \begin{twocolentry}{
-            Nov 2025 - Dec 2025 } \textbf{Tomasulo Out-of-Order RISC-V CPU | Digital Design, Timing Analysis, Verification}
-        \end{twocolentry}
-        \vspace{0.05 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Architected out-of-order execution system using Tomasulo's Algorithm with register renaming, reservation stations, and reorder buffer for advanced digital system design.
-                \item Achieved 36\% higher operating frequency (69.7MHz vs 51.2MHz) and 40-150\% IPC improvement compared to in-order implementation through timing optimization and performance analysis.
-                \item Synthesized to fabrication-ready GDSII using Sky130 130nm PDK, achieving zero DRC/LVS errors and comprehensive static timing analysis for reliable digital circuit operation.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.10 cm}
 
     \section{Experience}
 
@@ -206,7 +164,7 @@
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Engineered real-time control systems for hybrid solid oxide fuel cell reactors, implementing precise analog signal processing and motor control with PWM and ADC interfaces.
+                \item Designed mixed-signal control loops for fuel cell reactors, integrating high-precision \textbf{ADC} sensors and \textbf{PWM} motor drivers with noise-filtering firmware logic.
                 \item Developed embedded firmware with interrupt-driven architectures, real-time scheduling, and robust error handling for industrial control applications.
                 \item Integrated analog sensors and actuators with digital control systems, ensuring signal integrity, noise immunity, and reliable operation in harsh environments.
             \end{highlights}
@@ -237,18 +195,64 @@
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Maintain and operate LPKF PCB prototyping equipment ensuring reliable fabrication capabilities with 90\% uptime for student and faculty projects.
+                \item Maintain and operate \textbf{LPKF} PCB prototyping equipment ensuring reliable fabrication capabilities with \textbf{90\% uptime} for student and faculty projects.
                 \item Provide technical support for PCB design, fabrication, and assembly processes including schematic capture, layout, and component soldering techniques.
             \end{highlights}
         \end{onecolentry}
 
+    \section{Projects}
+
+        \begin{twocolentry}{
+            Jan 2025 – May 2025
+        }
+            \textbf{STM32G4 Bare-Metal Peripheral Integration | ARM Assembly, Analog/Digital Interfaces}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Implemented direct register-level programming for \textbf{ADC}, \textbf{DAC}, \textbf{PWM/PFM} generation using \textbf{TIM2}, and \textbf{SPI} flash memory interfaces on \textbf{STM32G4} microcontroller platform.
+                \item Engineered multiplexed interrupt system routing single hardware interrupt to \textbf{4 distinct peripheral drivers} with state-based arbitration for efficient resource utilization.
+                \item Developed comprehensive analog signal processing including \textbf{ADC} sampling, \textbf{DAC} output generation, and \textbf{PWM} motor control with precise timing and synchronization requirements.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Jan 2024 – Present
+        }
+            \textbf{Dual-Host S2-LP Radio Shield | KiCad, RF Design, Multi-Platform Firmware}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed dual-host development board for \textbf{S2-LP} sub-1 GHz transceiver with \textbf{STM32} and \textbf{RP2350} compatibility, implementing complete \textbf{RF} circuit with matching network and crystal oscillator for optimal radio performance.
+                \item Developed shadow mode debugging architecture where \textbf{STM32} passively monitors \textbf{SPI} traffic between \textbf{RP2350} and radio, enabling cross-platform firmware migration and protocol analysis for wireless development.
+                \item Created comprehensive firmware suite for both platforms including \textbf{SPI} drivers, radio configuration, packet transmission, and bus monitoring capabilities with detailed technical documentation.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+        \begin{twocolentry}{
+            Nov 2025 - Dec 2025 } \textbf{Tomasulo Out-of-Order RISC-V CPU | Digital Design, Timing Analysis, Verification}
+        \end{twocolentry}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Architected out-of-order execution system using \textbf{Tomasulo's Algorithm} with register renaming, reservation stations, and reorder buffer for advanced digital system design.
+                \item Achieved \textbf{36\% higher operating frequency} (\textbf{69.7MHz} vs 51.2MHz) and \textbf{40-150\% IPC improvement} compared to in-order implementation through timing optimization and performance analysis.
+                \item Synthesized to fabrication-ready GDSII using \textbf{Sky130 130nm PDK}, achieving \textbf{zero DRC/LVS errors} and comprehensive static timing analysis for reliable digital circuit operation.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
     \section{Skills}
         \begin{onecolentry}
+            \textbf{Programming Languages:} SystemVerilog, Verilog, C/C++, ARM Assembly, Python, Tcl, Bash, Rust, Java, OCaml, CUDA \\
             \textbf{Circuit Design:} Analog/Digital Circuits, Signal Processing, Power Systems, Filter Design \\
             \textbf{Electronics:} Microcontrollers, ADC/DAC, PWM, SPI/I2C/UART, GPIO, Embedded Programming \\
             \textbf{Laboratory Tools:} Oscilloscopes, Signal Generators, Multimeters, PCB Fabrication \\
-            \textbf{Software Tools:} KiCad, Cadence Spectre, MATLAB, LTspice, Xilinx Vivado \\
-            \textbf{Analysis:} Circuit Analysis, Signal Processing, Control Systems, Electromagnetic Compatibility
+            \textbf{Software Tools:} EDA Tools (KiCad), Cadence Spectre, MATLAB, LTspice, Xilinx Vivado
         \end{onecolentry}
 
 \end{document}

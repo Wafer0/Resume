@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.1)  3 JAN 2026 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  5 JAN 2026 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,9 +636,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 110.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 163.
+(Font)              <9> on input line 167.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 163.
+(Font)              <6> on input line 167.
 
 
 [1
@@ -661,7 +661,7 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  16377 strings out of 475171
  274187 string characters out of 5767096
- 707609 words of memory out of 5000000
+ 708609 words of memory out of 5000000
  39140 multiletter control sequences out of 15000+600000
  594397 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -670,7 +670,7 @@ Here is how much of TeX's memory you used:
 xmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/bitstrea/charter/bchri8a.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on hardware_resume.pdf (1 page, 59379 bytes).
+Output written on hardware_resume.pdf (1 page, 61342 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream

@@ -116,17 +116,21 @@
 
         \normalsize
         \mbox{College Park, MD}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
+        \mbox{U.S. Citizen}
+        \kern 3.0 pt
+        \AND
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
     \end{header}
 
@@ -147,7 +151,7 @@
     \end{twocolentry}
     \vspace{0.05cm}
     \begin{onecolentry}
-        \textbf{Relevant Coursework:} Digital Computer Design (ENEE646), Digital CMOS VLSI Design (ENEE640), Microprocessors (ENEE440), Computer Organization (ENEE350), Digital Circuits Lab (ENEE245), PCB Design (ENEE459A)
+        \textbf{Relevant Coursework:} Digital Computer Design (ENEE646), Digital CMOS VLSI Design (ENEE640), Microprocessors (ENEE440), Computer Organization (ENEE350), Digital Circuits Lab (ENEE245), PCB Design (ENEE459A), Operating Systems (ENEE447), Reverse Eng. \& HW Security (ENEE459B)
     \end{onecolentry}
 
     \section{Projects}
@@ -160,8 +164,8 @@
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Designed dual-host development board for S2-LP sub-1 GHz transceiver with STM32 and RP2350 compatibility, implementing complete RF circuit with matching network and crystal oscillator for optimal radio performance.
-                \item Developed shadow mode debugging architecture where STM32 passively monitors SPI traffic between RP2350 and radio, enabling cross-platform firmware migration and protocol analysis for wireless development.
+                \item Designed dual-host development board for \textbf{S2-LP} sub-1 GHz transceiver with \textbf{STM32} and \textbf{RP2350} compatibility, implementing complete RF circuit with matching network and crystal oscillator for optimal radio performance.
+                \item Designed a novel "\textbf{Shadow Mode}" debugging architecture allowing the \textbf{STM32} to snoop \textbf{SPI} traffic between the \textbf{RP2350} and \textbf{S2-LP} radio, facilitating real-time protocol analysis without bus contention.
                 \item Created comprehensive firmware suite for both platforms including SPI drivers, radio configuration, packet transmission, and bus monitoring capabilities with detailed technical documentation.
             \end{highlights}
         \end{onecolentry}
@@ -175,8 +179,8 @@
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Implemented bare-metal firmware with direct register-level programming for GPIO, DAC, ADC, TIM2 (PWM/PFM), and SPI2 flash memory drivers on STM32G4 microcontroller.
-                \item Engineered shared interrupt system multiplexing single EXTI1 hardware interrupt to four distinct peripheral drivers using state-based arbitration for efficient resource utilization.
+                \item Implemented \textbf{bare-metal} firmware with direct register-level programming for \textbf{GPIO}, \textbf{DAC}, \textbf{ADC}, \textbf{TIM2} (PWM/PFM), and \textbf{SPI2} flash memory drivers on \textbf{STM32G4} microcontroller.
+                \item Wrote \textbf{bare-metal} drivers (\textbf{ARM Assembly}/C) for a resource-constrained \textbf{STM32G4}; implemented a multiplexed interrupt handler to service \textbf{4 distinct peripherals} via a single hardware IRQ, reducing context-switching overhead.
                 \item Developed comprehensive testing framework ensuring real-time performance, peripheral synchronization, and robust error handling in resource-constrained embedded environment.
             \end{highlights}
         \end{onecolentry}
@@ -188,10 +192,10 @@
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Architected complex RTL system using Tomasulo's Algorithm with register renaming, 8-entry reservation stations, and 16-entry reorder buffer for advanced hardware design.
-                \item Achieved 36\% higher operating frequency (69.7MHz vs 51.2MHz) and 40-150\% IPC improvement compared to in-order implementation through hardware optimization and performance analysis.
+                \item Architected complex RTL system using \textbf{Tomasulo's Algorithm} with register renaming, \textbf{8-entry reservation stations}, and \textbf{16-entry reorder buffer} for advanced hardware design.
+                \item Achieved \textbf{36\% higher operating frequency} (\textbf{69.7MHz} vs 51.2MHz) and \textbf{40-150\% IPC improvement} compared to in-order implementation through hardware optimization and performance analysis.
                 \item Implemented sophisticated branch prediction, speculative execution, and precise exception handling ensuring robust hardware behavior across complex computational workloads.
-                \item Synthesized complex digital system with 1,652 standard cells achieving zero DRC violations and comprehensive functional verification for reliable hardware operation.
+                \item Synthesized complex digital system with \textbf{1,652 standard cells} achieving \textbf{zero DRC violations} and comprehensive functional verification for reliable hardware operation.
             \end{highlights}
         \end{onecolentry}
 
@@ -232,7 +236,7 @@
     \section{Skills}
         \begin{onecolentry}
             \textbf{Languages \& HDLs:} SystemVerilog, Verilog, C/C++, ARM Assembly, Python \\
-            \textbf{Hardware Design:} Digital Logic Design, PCB Design, Microcontroller Programming, FPGA Implementation, CMOS VLSI Design \\
+            \textbf{Hardware Design:} Digital Logic Design, PCB Design, Microcontroller Programming, FPGA Implementation, VLSI Design \\
             \textbf{Embedded Systems:} STM32 Bare-Metal Firmware, Real-Time Control, SPI, I2C, UART, GPIO, ADC/DAC, PWM \\
             \textbf{EDA Tools:} KiCad, Xilinx Vivado, Icarus Verilog, Verible, GTKWave, LPKF Prototyping, Altium Designer \\
             \textbf{Verification:} Functional Verification, Testbench Development, Static Timing Analysis, Linux

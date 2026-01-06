@@ -116,17 +116,21 @@
 
         \normalsize
         \mbox{College Park, MD}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
+        \mbox{U.S. Citizen}
+        \kern 3.0 pt
+        \AND
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
     \end{header}
 
@@ -147,20 +151,20 @@
     \end{twocolentry}
     \vspace{0.05cm}
     \begin{onecolentry}
-        \textbf{Relevant Coursework:} Digital CMOS VLSI Design (ENEE640), CMOS VLSI Design (ENEE646), Introduction to Micro/Nanoelectronics (ENEE304), Elements of Discrete Signal Analysis (ENEE222), Computer Organization (ENEE350)
+        \textbf{Relevant Coursework:} Digital CMOS VLSI Design (ENEE640), CMOS VLSI Design (ENEE646), Introduction to Micro/Nanoelectronics (ENEE304), Elements of Discrete Signal Analysis (ENEE222), Computer Organization (ENEE350), Math Foundations (ENEE641), Reverse Eng. \& HW Security (ENEE459B)
     \end{onecolentry}
 
     \section{Projects}
 
         \begin{twocolentry}{
-            Spring 2025 } \textbf{6-Bit Dadda Multiplier | CMOS VLSI Design, Neural Network Accelerators}
+            Jan 2025 – May 2025 } \textbf{6-Bit Dadda Multiplier | CMOS VLSI Design, Neural Network Accelerators}
         \end{twocolentry}
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Designed 6-bit Dadda multiplier for neural network accelerators, achieving 307 ps propagation delay and 0.279 mW power consumption through CMOS optimization.
-                \item Implemented Dadda architecture with partial product generation, reduction stages, and RCA final summation, including cheating device for worst-case all-ones inputs.
-                \item Optimized transistor sizing (NMOS M=15, PMOS M=14, 300nm gate width) and minimized parasitic capacitance for maximum speed-power efficiency.
+                \item Designed \textbf{6-bit Dadda multiplier} for neural network accelerators, achieving \textbf{307 ps propagation delay} and \textbf{0.279 mW power consumption} through CMOS optimization.
+                \item Implemented \textbf{Dadda architecture} with partial product generation, reduction stages, and RCA final summation, including Input-Dependent Latency Optimization logic to bypass calculation stages for specific worst-case vectors, improving average throughput.
+                \item Achieved \textbf{307ps propagation delay} by manually sizing transistors (\textbf{W/L ratios}) to balance drive strength vs. parasitic capacitance, optimizing the \textbf{Critical Path} for worst-case input vectors.
             \end{highlights}
         \end{onecolentry}
 
@@ -171,9 +175,9 @@
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Architected CMOS VLSI system using Tomasulo's Algorithm with register renaming, reservation stations, and reorder buffer for advanced semiconductor design.
-                \item Achieved 36\% higher operating frequency (69.7MHz vs 51.2MHz) through CMOS circuit optimization, timing closure, and power-performance trade-offs.
-                \item Synthesized to fabrication-ready GDSII using Sky130 130nm CMOS PDK with zero DRC/LVS violations and comprehensive static timing analysis.
+                \item Driven the physical design of a \textbf{1,652-cell} Out-of-Order CPU; achieved \textbf{DRC/LVS clean layout} in \textbf{Sky130 130nm} process with \textbf{zero hold-time violations} across all PVT corners.
+                \item Achieved \textbf{36\% higher operating frequency} (\textbf{69.7MHz} vs 51.2MHz) through CMOS circuit optimization, timing closure, and power-performance trade-offs.
+                \item Synthesized to fabrication-ready \textbf{GDSII} using \textbf{Sky130 130nm CMOS PDK} with \textbf{zero DRC/LVS violations} and comprehensive static timing analysis.
             \end{highlights}
         \end{onecolentry}
 
@@ -186,8 +190,8 @@
             \begin{highlights}
                 \item Designed synchronous CMOS digital circuits implementing hazard detection, data forwarding, and branch resolution for reliable semiconductor operation.
                 \item Optimized critical path timing through CMOS transistor sizing, clock domain management, and synchronous reset implementation for manufacturable ASIC designs.
-                \item Synthesized CMOS standard cells achieving 10,121 total cells with 1.0mm² die area, demonstrating PPA optimization in 130nm CMOS technology.
-                \item Implemented comprehensive verification methodology ensuring 100\% functional coverage and timing closure for CMOS circuit reliability.
+                \item Synthesized CMOS standard cells achieving \textbf{10,121 total cells} with \textbf{1.0mm² die area}, demonstrating PPA optimization in 130nm CMOS technology.
+                \item Implemented comprehensive verification methodology ensuring \textbf{100\% functional coverage} and timing closure for CMOS circuit reliability.
             \end{highlights}
         \end{onecolentry}
 
@@ -226,7 +230,7 @@
         \begin{onecolentry}
             \textbf{CMOS VLSI Design:} Digital CMOS Design, Transistor-Level Design, Standard Cell Libraries, CMOS PDKs \\
             \textbf{Circuit Design:} Synchronous Digital Circuits, CMOS Logic Design, Timing Analysis, Power Analysis \\
-            \textbf{Semiconductor Tools:} Cadence Spectre, CMOS PDKs (Sky130), DRC/LVS Verification, Static Timing Analysis \\
+            \textbf{Semiconductor Tools:} Cadence Virtuoso, Cadence Spectre, CMOS PDKs (Sky130), DRC/LVS Verification, Static Timing Analysis \\
             \textbf{ASIC Methodologies:} PPA Optimization, CMOS Synthesis, Physical Design, Semiconductor Manufacturing
         \end{onecolentry}
 

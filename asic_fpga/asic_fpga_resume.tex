@@ -116,17 +116,21 @@
 
         \normalsize
         \mbox{College Park, MD}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
+        \mbox{U.S. Citizen}
+        \kern 3.0 pt
+        \AND
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
-        \kern 5.0 pt
+        \kern 3.0 pt
         \AND
-        \kern 5.0 pt
+        \kern 3.0 pt
         \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
     \end{header}
 
@@ -147,7 +151,7 @@
     \end{twocolentry}
     \vspace{0.05cm}
     \begin{onecolentry}
-        \textbf{Relevant Coursework:} Digital Computer Design (ENEE646), Digital CMOS VLSI Design (ENEE640), Modern Digital System Design (ENEE408C), Parallel Computing (CMSC416), Computer Organization (ENEE350), Algorithms (CMSC351)
+        \textbf{Relevant Coursework:} Digital Computer Design (ENEE646), Digital CMOS VLSI Design (ENEE640), Modern Digital System Design (ENEE408C), Parallel Computing (CMSC416), Math Foundations (ENEE641), Reverse Eng. \& HW Security (ENEE459B), CAD Tools (ENEE459A)
     \end{onecolentry}
 
     \section{Projects}
@@ -161,7 +165,7 @@
                 \item Architected complete out-of-order CPU using \textbf{Tomasulo's Algorithm} with register renaming, 8-entry reservation stations, 16-entry reorder buffer, and common data bus for dynamic scheduling and speculative execution.
                 \item Achieved \textbf{36\% higher frequency} (69.7MHz vs 51.2MHz) and 40-150\% IPC improvement on complex workloads compared to in-order implementation through comprehensive benchmarking and performance analysis.
                 \item Synthesized to fabrication-ready GDSII using \textbf{Sky130 130nm PDK}, achieving 0 DRC violations, 0 LVS errors, and meeting all PPA constraints with comprehensive static timing analysis.
-                \item Implemented sophisticated \textbf{branch prediction and recovery} mechanisms, dynamic hazard resolution, and in-order commit ensuring precise exceptions and program correctness.
+                \item Engineered a Bash-driven regression suite comparing architectural state against an ISA simulator (Golden Reference), achieving 100\% pass rate across 15 unit tests and 7 full-system workloads.
             \end{highlights}
         \end{onecolentry}
 
@@ -182,14 +186,14 @@
         \vspace{0.10 cm}
 
         \begin{twocolentry}{
-            Fall 2025
+            Aug 2025 – Dec 2025
         }
             \textbf{Polynomial Evaluation Accelerator | SystemVerilog, FPGA Synthesis}
         \end{twocolentry}
         \vspace{0.05 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Architected high-throughput accelerator using LIDE-V dataflow paradigm, implementing 5 distinct finite state machines for FIFO handshaking and resource arbitration across 9 processing modules.
+                \item Architected a high-throughput LIDE (Lightweight Dataflow Environment) accelerator; designed 5 coordinating FSMs to manage data tokens between 9 actor modules, ensuring deadlock-free operation.
                 \item Achieved 100\% functional coverage through comprehensive SystemVerilog testbench development with 15+ complex test cases validated against C reference models.
                 \item Optimized memory access with dual-port coefficient memory and auto-padding logic, enabling batch processing of up to 31 polynomial evaluations with minimal latency.
             \end{highlights}
@@ -229,9 +233,9 @@
     \section{Skills}
         \begin{onecolentry}
             \textbf{HDLs \& Languages:} SystemVerilog, Verilog, C/C++, Python, Tcl, Bash \\
-            \textbf{Computer Architecture:} RISC-V ISA, Tomasulo's Algorithm, Pipelined Datapaths, Out-of-Order Execution, Hazard Control, RTL Design \\
-            \textbf{ASIC/FPGA Tools:} OpenLane, Yosys, Sky130 PDK, Xilinx Vivado, Icarus Verilog, Verible, GTKWave, Static Timing Analysis, DRC/LVS Verification \\
-            \textbf{Methodologies:} PPA Optimization, Testbench Development, Functional Verification, Git, Linux
+            \textbf{Computer Architecture:} RISC-V ISA, Pipelined Datapaths, Out-of-Order Execution, Hazard Control, RTL Design \\
+            \textbf{ASIC/FPGA Tools:} OpenLane, Yosys, Sky130 PDK, Vivado, Icarus Verilog, Verible, GTKWave, STA, DRC/LVS Verification \\
+            \textbf{Methodologies:} PPA Optimization, Testbench Development, Functional Verification, Automated Regression, Bash Scripting, Immediate Assertions, Waveform Debugging, Git, Linux
         \end{onecolentry}
 
 \end{document}
