@@ -1,0 +1,221 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.8cm, bottom=0.8cm, left=1.2cm, right=1.2cm,
+    footskip=1.0 cm,
+    ]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Andreas Tzitzikas's Courtyards RA Resume},
+    pdfauthor={Andreas Tzitzikas},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{datetime}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.2cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.2 cm
+}{
+    0.1 cm
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{16 pt}{16 pt}\selectfont Andreas Tzitzikas
+
+        \vspace{3 pt}
+
+        \normalsize
+        \mbox{College Park, MD}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{mailto:andreas.tz.work@gmail.com}{andreas.tz.work@gmail.com}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{tel:410-920-5319}{410-920-5319}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/andreas-tzitzikas}{linkedin.com/in/andreas-tzitzikas}}
+        \kern 5.0 pt
+        \AND
+        \kern 5.0 pt
+        \mbox{\hrefWithoutArrow{https://github.com/Wafer0}{github.com/Wafer0}}
+    \end{header}
+
+    \vspace{3 pt}
+
+    \section{Education}
+
+    \vspace{0.10cm}
+    \begin{twocolentry}{Expected May 2026}
+        \textbf{University of Maryland}, College Park, MD
+    \end{twocolentry}
+    \begin{twocolentry}{\textbf{GPA: 3.89}}
+        \textit{Bachelor of Science in Computer Engineering}
+    \end{twocolentry}
+
+    \section{Experience}
+
+    \begin{twocolentry}{
+        Jan 2025 - Present
+    }
+        \textbf{Resident Assistant}, The Courtyards at UMD -- College Park, MD
+    \end{twocolentry}
+    \vspace{0.05 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Directed community development initiatives, increasing event attendance from 5 to over 30 residents by tailoring programs to student interests and fostering inclusive participation.
+            \item Planned and executed 4+ successful community events including ice cream socials, sustainability workshops, resume building sessions, and winter decorating parties, serving 40+ residents total.
+            \item Led conflict resolution for roommate disputes and policy violations, mediating discussions and implementing solutions to maintain safe, respectful living environments.
+            \item Responded to crisis situations involving intoxicated students, ensuring resident safety and coordinating appropriate support resources while maintaining confidentiality.
+            \item Served as 24/7 live-in staff member, conducting nightly property rounds and providing immediate response to resident concerns and emergencies.
+            \item Collaborated with professional staff to enforce university policies, complete incident reports, and maintain detailed RA duty logs for comprehensive documentation.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.10 cm}
+
+    \begin{twocolentry}{
+        Jan 2024 - Present
+    }
+        \textbf{Technical Coordinator}, Electronics Prototyping Lab, Terrapin Works -- College Park, MD
+    \end{twocolentry}
+    \vspace{0.05 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Lead hands-on workshops for motors/sensors, soldering, Arduino, and PCB design, mentoring 10-30 students per session in practical electronics skills.
+            \item Provide personalized project guidance to students, helping them develop technical competencies and apply engineering principles to real-world applications.
+            \item Maintained 90\% equipment uptime for LPKF PCB prototyping tools, ensuring reliable access for 20+ students and faculty per semester.
+            \item Conduct training sessions for new lab employees and expanded outreach to increase campus awareness of electronics prototyping services.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.10 cm}
+
+    \begin{twocolentry}{
+        Sep 2025 - Present
+    }
+        \textbf{Undergraduate Teaching Assistant}, ENEE205 Electric Circuits -- College Park, MD
+    \end{twocolentry}
+    \vspace{0.05 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Lead weekly 3-hour laboratory sections and 1-hour office hours, providing individualized and group instruction to 12 students on circuit theory and analysis.
+            \item Evaluate homework, lab reports, and quizzes while offering constructive feedback to reinforce learning objectives and ensure student comprehension.
+            \item Facilitate hands-on application of circuit concepts using oscilloscopes, signal generators, and simulation tools for practical engineering education.
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Leadership \& Community Development}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textbf{Community Event Planning:} Organized Scoops \& Study Breaks (15-25 attendees), Sprout \& Snack sustainability workshop (8 attendees), Resume Workshop (3 attendees), and Warm Up \& Wind Down winter celebration (20 attendees).
+            \item \textbf{Conflict Resolution:} Successfully mediated multiple roommate conflicts involving policy violations, implementing fair solutions and documenting outcomes.
+            \item \textbf{Crisis Management:} Handled incidents involving intoxicated students, providing immediate support while coordinating university resources and maintaining resident safety.
+            \item \textbf{Student Mentorship:} Guided residents through academic challenges, connecting them with university resources for mental health, career development, and personal growth.
+            \item \textbf{Inclusive Leadership:} Fostered welcoming environments across diverse backgrounds, promoting respect and community engagement through targeted programming.
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Skills}
+        \begin{onecolentry}
+            \textbf{Community Leadership:} Event Planning, Conflict Resolution, Crisis Management, Student Mentoring, Policy Enforcement \\
+            \textbf{Communication:} Interpersonal Relations, Active Listening, Group Facilitation, Written Documentation \\
+            \textbf{Administrative:} Incident Reporting, Duty Logging, Resource Coordination, Confidentiality Management
+        \end{onecolentry}
+
+\end{document}

@@ -5,6 +5,7 @@ Specialized resume versions for different engineering roles, plus comprehensive 
 ## Resume Directories
 
 - `asic_fpga/` - ASIC/FPGA/Chip Design focused resume
+- `courtyards_ra/` - Resident Assistant focused resume
 - `ee/` - Electrical Engineering focused resume
 - `hardware/` - Hardware Engineering focused resume
 - `swe/` - Software Engineering focused resume
@@ -26,3 +27,4 @@ Compiled PDFs are placed in their respective directories with names `Andreas_Tzi
 - `c` = Hardware Engineering resume → `hardware/`
 - `d` = Software Engineering resume → `swe/`
 - `e` = VLSI Design resume → `vlsi/`
+- `ra` = Resident Assistant resume → `courtyards_ra/`
